@@ -18,7 +18,7 @@ List letters without deleting
 
 Delete letters
 
-`php imap_delete.php -v -f 2019-01-01 -t 2019-12-31`
+`php imap_delete.php -d -v -f 2019-01-01 -t 2019-12-31`
 
 ### Options
 
