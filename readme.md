@@ -8,17 +8,19 @@ Run in CLI (Linux, Mac or Windows)
 
 First you need to define your IMAP server, mailbox address and password in the scipt first lines.
 
-List folders — if you want to clean folder other than INBOX. Note that non-ASCII names will be in UTF-7 encoding
+**List folders** — if you want to clean folder other than INBOX. Note that non-ASCII names will be in UTF-7 encoding
+
+(If using Windows cmd.exe, type: `chcp 65001`)
 
 `php imap_delete.php -l`
 
-List letters without deleting
+**List letters** without deleting
 
-`php imap_delete.php -v -f 2019-01-01 -t 2019-12-31`
+`php imap_delete.php -v -f 2023-01-01 -t 2023-12-31`
 
-Delete letters
+**Delete letters**
 
-`php imap_delete.php -d -v -f 2019-01-01 -t 2019-12-31`
+`php imap_delete.php -d -v -f 2023-01-01 -t 2023-12-31`
 
 ### Options
 

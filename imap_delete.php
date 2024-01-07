@@ -59,7 +59,8 @@ $inbox = connect();
 if (isset($cliOptions['l'])) {
     $mailboxes = imap_list($inbox, IMAP_HOST, '*');
     foreach ($mailboxes as $mailbox) {
-        echo $mailbox . PHP_EOL;
+        $mailboxHuman = mb_convert_encoding($mailbox, "utf-8", "UTF7-IMAP");
+        echo $mailbox . ($mailbox !== $mailboxHuman ? "\t (" . strrchr($mailboxHuman, '/') . ')' : '') . PHP_EOL;
     }
 
     exit;
